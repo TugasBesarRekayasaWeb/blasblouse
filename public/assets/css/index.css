@@ -1,0 +1,29 @@
+.navbar-brang {
+	margin:0;
+}
+.navbar-brand img{
+	width: 150px;
+	height: 75px;
+	margin-top: -10px;
+	margin-bottom: -10px;
+}
+
+.footer {
+	width: 100%;
+	min-height: 200px;
+	background-color:  #f8f9fa;
+}
+
+.sub-footer {
+	margin-top: 10px;
+	width: 15%;
+	min-height: 50px;
+	margin-left: 100px;
+/*	background-color: salmon;*/
+	float: left;
+}
+
+.sub-footer a {
+	color: black;
+}
+
