@@ -50,6 +50,7 @@
 
 	@yield('footer')
 
+	<div class="clear"></div>
 	<div class="footer">
 		<div class="sub-footer">
 			<h6>PRODUCT</h6>
