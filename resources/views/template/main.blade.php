@@ -12,7 +12,6 @@
     <title>@yield('title')</title>
   </head> 
   <body>
-
   	<!-- Nav bar -->
 
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -35,15 +34,13 @@
 			  </form>
 		  <!-- End of Search -->
 		  <div class="navbar-nav ml-4">
-		  	<a href="nav-item nav-link" href="#">Login</a>
+		  	<a class="nav-item nav-link" href="/login">Login</a>
 		  </div>
 	  </div>
 
 	</nav>
 
 	<!-- End of Nav bar -->
-
-
 	@yield('badan')
 
 

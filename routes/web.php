@@ -12,3 +12,5 @@
 */
 
 Route::get('/', 'PageController@home');
+Route::get('/login','PageController@login');
+Route::get('/register','PageController@register');
