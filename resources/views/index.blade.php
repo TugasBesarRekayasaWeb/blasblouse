@@ -48,6 +48,38 @@
 		  <!-- End of Slide show -->
 
 
+<!-- Popular This Week -->
+
+	<h1>POPULAR THIS WEEK</h1>
+	<div class="card" style="width: 18rem;">
+		<img src="{{ asset('assets/image/1.jpg') }}" class="card-img-top" alt="...">
+			<div class="card-body">
+			 	<h5 class="card-title">Cotton T-shirt</h5>
+			    <p class="card-text">IDR. 70.000</p>
+			    <a href="#" class="btn">Quick Shop</a>
+			</div>
+	</div>
+
+	<div class="card" style="width: 18rem;">
+		<img src="{{ asset('assets/image/2.jpg') }}" class="card-img-top" alt="...">
+			<div class="card-body">
+			 	<h5 class="card-title">Cotton T-shirt</h5>
+			    <p class="card-text">IDR. 70.000</p>
+			    <a href="#" class="btn">Quick Shop</a>
+			</div>
+	</div>
+
+	<div class="card" style="width: 18rem;">
+		<img src="{{ asset('assets/image/3.jpg') }}" class="card-img-top" alt="...">
+			<div class="card-body">
+			 	<h5 class="card-title">Cotton T-shirt</h5>
+			    <p class="card-text">IDR. 70.000</p>
+			    <a href="#" class="btn">Quick Shop</a>
+			</div>
+	</div>
+
+
+<!-- End of Popular This Week -->
 @endsection
 
 @section('footer')
