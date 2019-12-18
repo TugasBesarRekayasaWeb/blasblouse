@@ -12,6 +12,11 @@
 */
 Auth::routes();
 Route::get('/', 'PageController@home')->name('index');
+Route::get('/newarrival', 'PageController@newarrival');
+Route::get('/bestseller', 'PageController@bestseller');
+Route::get('/sale', 'PageController@sale');
+
+
 Route::get('/register','PageController@register');
 Route::get('/admin','AdminController@index');
 Route::get('/user','UserController@index');
@@ -23,4 +28,7 @@ Route::post('/postlogin','FalidasiLogin@postlogin');
 
 Route::Post('/register','RegisterController@create');
 Route::get('/register','RegisterController@getRegister')->name('register');
+
+
+
 

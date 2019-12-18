@@ -18,13 +18,31 @@ class PageController extends Controller
     {
         //
     }
-     public function home()
-    {
+     public function home() {
         return view('index');
     }
+
+    public function newarrival() {
+        return view('/newarrival/newarrival');
+    }
+
+    public function bestseller(){
+        return view('/bestseller/bestseller');
+    }
+
+    public function sale(){
+        return view('/sale/sale');
+    }
+
+
+
     public function register(){
         return view('register');
     }
+
+    
+
+
 
 
 }
