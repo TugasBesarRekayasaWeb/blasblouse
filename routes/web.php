@@ -10,7 +10,17 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', 'PageController@home');
-Route::get('/login','PageController@login');
+Auth::routes();
+Route::get('/', 'PageController@home')->name('index');
 Route::get('/register','PageController@register');
+Route::get('/admin','AdminController@index');
+Route::get('/user','UserController@index');
+
+Route::get('/login','FalidasiLogin@login');
+
+Route::post('/postlogin','FalidasiLogin@postlogin');
+
+
+Route::Post('/register','RegisterController@create');
+Route::get('/register','RegisterController@getRegister')->name('register');
+
