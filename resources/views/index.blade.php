@@ -6,6 +6,7 @@
 
 @section('badan')
 
+
 	<!-- Slide show -->
 		  		<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel"  style="background-color: black;">
 				  <ol class="carousel-indicators">

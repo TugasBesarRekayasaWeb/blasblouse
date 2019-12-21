@@ -15,6 +15,7 @@ Route::get('/', 'PageController@home')->name('index');
 Route::get('/newarrival', 'PageController@newarrival');
 Route::get('/bestseller', 'PageController@bestseller');
 Route::get('/sale', 'PageController@sale');
+Route::get('/product', 'ProductController@index');
 
 
 Route::get('/register','PageController@register');
