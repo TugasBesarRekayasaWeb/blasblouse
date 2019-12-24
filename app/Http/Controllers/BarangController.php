@@ -14,8 +14,8 @@ class BarangController extends Controller
      */
     public function index()
     {
-        $barang = Barang::all();
-        return view('Barang1.index', compact('barang'));
+        $product = Barang::all();
+        return view('/admin',['product'=> $product]);
         //
     }
 
@@ -26,7 +26,7 @@ class BarangController extends Controller
      */
     public function create()
     {
-        return view ('Barang1.create');
+        return view ('admin.create');
     }
 
     /**
@@ -39,46 +39,36 @@ class BarangController extends Controller
     {
 
     
-       
+       $this->Validate($request,[
+            'nama' => 'required',
+            'harga' => 'required',
+            'detail' => 'required',
+            'S'=>'required',
+            'M'=>'required',
+            'L'=>'required',
+            'XL'=>'required',
+            'XXL'=>'required',
+            'Gambar'=>'required',
+            'gambarModel'=>'required',
+            'gambarPosisi'=>'required',
+            'gambarDetail'=>'required' 
 
-        $barang = new Barang;
-        $barang->id = $request->id;
-        $barang->Nama_barang = $request->Nama_barang;
-        $barang->Picture = $request->Picture;
-        $barang->Merk_barang = $request->Merk_barang;
-        $barang->Harga_barang= $request->Harga_barang;
-
-       
-
-
-       
-
-
-            $barang->save();
-
-                return redirect('/barang');
-
-        
-
-
-
-
-    }
-
-
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Barang  $barang
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Barang $barang)
-    {
-      
-        $barang = Barang::all();  
-        return view ('barang1/show', compact('barang'));
-        //
+        ]);
+       Barang::create([
+            'nama' => $request->nama,
+            'harga' => $request->harga,
+            'detail' => $request->detail,
+            'S'=> $request->S,
+            'M'=> $request->M,
+            'L'=> $request->L,
+            'XL'=> $request->XL,
+            'XXL'=> $request->XXL,
+            'Gambar'=> $request->Gambar,
+            'gambarModel'=> $request->gambarModel,
+            'gambarPosisi'=> $request->gambarPosisi,
+            'gambarDetail'=> $request->gambarDetail
+        ]);
+       return redirect()->route('admin');
     }
 
     /**
@@ -89,7 +79,7 @@ class BarangController extends Controller
      */
     public function edit(Barang $barang)
     {
-        return view ('barang1.edit', compact('barang'));
+        return view ('admin.edit', compact('barang'));
     }
 
     /**
@@ -101,14 +91,37 @@ class BarangController extends Controller
      */
     public function update(Request $request, Barang $barang)
     {
+         $this->Validate($request,[
+            'nama' => 'required',
+            'harga' => 'required',
+            'detail' => 'required',
+            'S'=>'required',
+            'M'=>'required',
+            'L'=>'required',
+            'XL'=>'required',
+            'XXL'=>'required',
+            'Gambar'=>'required',
+            'gambarModel'=>'required',
+            'gambarPosisi'=>'required',
+            'gambarDetail'=>'required' 
+
+        ]);
         Barang::where('id', $barang->id)
             ->update([
-                'Nama_barang'=> $request->Nama_barang,
-                'Picture'=> $request->Picture,
-                'Merk_barang'=> $request->Merk_barang,
-                'Harga_barang'=> $request->Harga_barang,
+                'nama' => $request->nama,
+            'harga' => $request->harga,
+            'detail' => $request->detail,
+            'S'=> $request->S,
+            'M'=> $request->M,
+            'L'=> $request->L,
+            'XL'=> $request->XL,
+            'XXL'=> $request->XXL,
+            'Gambar'=> $request->Gambar,
+            'gambarModel'=> $request->gambarModel,
+            'gambarPosisi'=> $request->gambarPosisi,
+            'gambarDetail'=> $request->gambarDetail
             ]);
-        return redirect('/barang');
+        return redirect('/admin');
     }
 
     /**
@@ -119,7 +132,6 @@ class BarangController extends Controller
      */
     public function destroy(Barang $barang)
     {
-        
         Barang::destroy($barang->id);
         return redirect('/barang');
     }

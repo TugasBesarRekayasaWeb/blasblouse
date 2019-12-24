@@ -19,7 +19,6 @@ Route::get('/product', 'ProductController@index');
 
 
 Route::get('/register','PageController@register');
-Route::get('/admin','AdminController@index');
 Route::get('/user','UserController@index');
 
 Route::get('/login','FalidasiLogin@login');
@@ -31,11 +30,15 @@ Route::Post('/register','RegisterController@create');
 Route::get('/register','RegisterController@getRegister')->name('register');
 
 
-Route::get('/barang', 'BarangController@index');
+Route::get('/admin', 'BarangController@index')->name('admin');
+
+Route::delete('/barang/{barang}','BarangController@destroy');
+
 Route::get('/barang/create', 'BarangController@create');
-Route::get('/barang/{brg}', 'BarangController@show');
-Route::post('/barang', 'BarangController@store');
-Route::delete('/barang/{barang}', 'BarangController@destroy');
+Route::post('/barang/create', 'BarangController@store');
+
+
+
 Route::get('/barang/{barang}/edit', 'BarangController@edit');
 Route::patch('/barang/{barang}', 'BarangController@update');
 
