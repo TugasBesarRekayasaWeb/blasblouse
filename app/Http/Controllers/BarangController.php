@@ -133,6 +133,6 @@ class BarangController extends Controller
     public function destroy(Barang $barang)
     {
         Barang::destroy($barang->id);
-        return redirect('/barang');
+        return redirect()->route('admin');
     }
 }

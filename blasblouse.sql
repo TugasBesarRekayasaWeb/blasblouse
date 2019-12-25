@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.2
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 21, 2019 at 02:02 AM
--- Server version: 10.4.10-MariaDB
--- PHP Version: 7.3.12
+-- Generation Time: Dec 25, 2019 at 09:31 AM
+-- Server version: 10.1.40-MariaDB
+-- PHP Version: 7.3.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -76,23 +76,29 @@ CREATE TABLE `product` (
   `Gambar` varchar(30) NOT NULL,
   `gambarModel` varchar(30) NOT NULL,
   `gambarPosisi` varchar(30) NOT NULL,
-  `gambarDetail` varchar(30) NOT NULL
+  `gambarDetail` varchar(30) NOT NULL,
+  `updated_at` varchar(255) NOT NULL,
+  `created_at` varchar(155) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `product`
 --
 
-INSERT INTO `product` (`id`, `nama`, `harga`, `detail`, `S`, `M`, `L`, `XL`, `XXL`, `Gambar`, `gambarModel`, `gambarPosisi`, `gambarDetail`) VALUES
-(1, 'Short Polo-Neck Top', 149000, 'Material comes from 100% cotton', 5, 5, 5, 5, 5, 'ShortPoloNeckHitam.jpg', 'ShortPoloNeckHitamModel.jpg', 'ShortPoloNeckHitamPosisi.jpg', 'ShortPoloNeckHitamDetail.jpg'),
-(2, 'T-shirt With A Motif', 129000, 'Material comes from 100% cotton', 4, 4, 4, 4, 4, 'TshirtWithAMotif,jpg', 'TshirtWithAMotifModel.jpg', 'TshirtWithAMotifPosisi.jpg', 'TshirtWithAMotifDetail.jpg'),
-(3, 'Short T-shirt', 129000, 'Material comes from 100% cotton', 6, 6, 6, 6, 6, 'ShortT-shirt.jpg', 'ShortT-shirtModel.jpg', 'ShortT-shirtPosisi.jpg', 'ShortT-shirtDetail.jpg'),
-(4, 'Flock-print T-shirt', 149000, 'Material comes from 100% cotton, Flock printed', 7, 7, 7, 7, 7, 'Flock-printT-shirt.jpg', 'Flock-printT-shirtModel.jpg', 'Flock-printT-shirtPosisi.jpg', 'Flock-printT-shirtDetail.jpg'),
-(5, 'Jersey T-shirt', 69000, 'Material Jersey', 2, 2, 2, 2, 2, 'JerseyT-shirt.jpg', 'JerseyT-shirtModel.jpg', 'JerseyT-shirtPosisi.jpg', 'JerseyT-shirtDetail.jpg'),
-(6, 'Nasa Short T-shirt', 129000, 'Material comes from 100% cotton', 6, 7, 7, 7, 8, 'NasaShortT-shirt.jpg', 'NasaShortT-shirtModel.jpg', 'NasaShortT-shirtPosisi.jpg', 'NasaShortT-shirtDetail,jpg'),
-(7, 'Linen T-shirt', 179000, 'Material comes from Premium Linen Quality', 8, 8, 8, 9, 9, 'LinenT-shirt.jpg', 'LinenT-shirtModel.jpg', 'LinenT-shirtPosisi.jpg', 'LinenT-shirtDetail.jpg'),
-(8, 'V-neck T-shirt', 69000, 'Material comes from 100% cotton', 5, 5, 5, 5, 5, 'V-neckT-shirt.jpg', 'V-neckT-shirtModel.jpg', 'V-neckT-shirtPosisi.jpg', 'V-neckT-shirtDetail.jpg'),
-(9, 'Viscose Tshirt', 149000, 'Viscose Material ', 5, 5, 4, 4, 3, 'ViscoseT-shirt.jpg', 'ViscoseT-shirtModel.jpg', 'ViscoseT-shirtPosisi.jpg', 'ViscoseT-shirtDetail.jpg');
+INSERT INTO `product` (`id`, `nama`, `harga`, `detail`, `S`, `M`, `L`, `XL`, `XXL`, `Gambar`, `gambarModel`, `gambarPosisi`, `gambarDetail`, `updated_at`, `created_at`) VALUES
+(1, 'Short Polo-Neck Top', 149000, 'Material comes from 100% cotton', 5, 5, 5, 5, 5, 'ShortPoloNeckHitam.jpg', 'ShortPoloNeckHitamModel.jpg', 'ShortPoloNeckHitamPosisi.jpg', 'ShortPoloNeckHitamDetail.jpg', '', ''),
+(2, 'T-shirt With A Motif', 129000, 'Material comes from 100% cotton', 4, 4, 4, 4, 4, 'TshirtWithAMotif.jpg', 'TshirtWithAMotifModel.jpg', 'TshirtWithAMotifPosisi.jpg', 'TshirtWithAMotifDetail.jpg', '', ''),
+(3, 'Short T-shirt', 129000, 'Material comes from 100% cotton', 6, 6, 6, 6, 6, 'ShortT-shirt.jpg', 'ShortT-shirtModel.jpg', 'ShortT-shirtPosisi.jpg', 'ShortT-shirtDetail.jpg', '', ''),
+(4, 'Flock-print T-shirt', 149000, 'Material comes from 100% cotton, Flock printed', 7, 7, 7, 7, 7, 'Flock-printT-shirt.jpg', 'Flock-printT-shirtModel.jpg', 'Flock-printT-shirtPosisi.jpg', 'Flock-printT-shirtDetail.jpg', '', ''),
+(5, 'Jersey T-shirt', 69000, 'Material Jersey', 2, 2, 2, 2, 2, 'JerseyT-shirt.jpg', 'JerseyT-shirtModel.jpg', 'JerseyT-shirtPosisi.jpg', 'JerseyT-shirtDetail.jpg', '', ''),
+(6, 'Nasa Short T-shirt', 129000, 'Material comes from 100% cotton', 6, 7, 7, 7, 8, 'NasaShortT-shirt.jpg', 'NasaShortT-shirtModel.jpg', 'NasaShortT-shirtPosisi.jpg', 'NasaShortT-shirtDetail,jpg', '', ''),
+(7, 'Linen T-shirt', 179000, 'Material comes from Premium Linen Quality', 8, 8, 8, 9, 9, 'LinenT-shirt.jpg', 'LinenT-shirtModel.jpg', 'LinenT-shirtPosisi.jpg', 'LinenT-shirtDetail.jpg', '', ''),
+(8, 'V-neck T-shirt', 69000, 'Material comes from 100% cotton', 5, 5, 5, 5, 5, 'V-neckT-shirt.jpg', 'V-neckT-shirtModel.jpg', 'V-neckT-shirtPosisi.jpg', 'V-neckT-shirtDetail.jpg', '', ''),
+(9, 'Viscose Tshirt', 149000, 'Viscose Material ', 5, 5, 4, 4, 3, 'ViscoseT-shirt.jpg', 'ViscoseT-shirtModel.jpg', 'ViscoseT-shirtPosisi.jpg', 'ViscoseT-shirtDetail.jpg', '', ''),
+(14, 'asd', 4444, 'asdds', 5, 6, 7, 8, 8, '2.PNG', '2.PNG', '01.jpg', '2.PNG', '2019-12-24 12:21:24', '2019-12-24 12:21:24'),
+(15, 'asdsd', 5555, '1asdsa', 5, 5, 5, 5, 5, '2.PNG', '01.jpg', '01.jpg', '01.jpg', '2019-12-24 12:29:18', '2019-12-24 12:29:18'),
+(16, 'asdsd', 5555, '1asdsa', 5, 5, 5, 5, 5, '2.PNG', '01.jpg', '01.jpg', '01.jpg', '2019-12-24 12:30:59', '2019-12-24 12:30:59'),
+(17, 'asdsd', 5555, '1asdsa', 5, 5, 5, 5, 5, '2.PNG', '01.jpg', '01.jpg', '01.jpg', '2019-12-24 12:31:38', '2019-12-24 12:31:38');
 
 -- --------------------------------------------------------
 
@@ -171,7 +177,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `users`
