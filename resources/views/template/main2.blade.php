@@ -25,6 +25,7 @@
 		      <a class="nav-item nav-link" href="{{url('/newarrival')}}">NEW ARRIVAL</a>
 		      <a class="nav-item nav-link" href="{{url('/bestseller')}}">BEST SELLER</a>
 		      <a class="nav-item nav-link" href="{{url('/sale')}}">SALE</a>
+		      <a class="nav-item nav-link" href="{{url('/product')}}">PRODUCT</a>
 		    </div>
 		  </div>
 		  <!-- Search -->
@@ -34,7 +35,7 @@
 			  </form>
 		  <!-- End of Search -->
 		  <div class="navbar-nav ml-4">
-		  	<a class="nav-item nav-link" href="/login">Login</a>
+		  	<a class="nav-item nav-link" href="#">shopping bag()</a>
 		  </div>
 	  </div>
 

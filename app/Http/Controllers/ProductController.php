@@ -19,6 +19,7 @@ class ProductController extends Controller
         return view('product.product', ['product' => $product]) ;
     }
 
+
     /**
      * Show the form for creating a new resource.
      *
