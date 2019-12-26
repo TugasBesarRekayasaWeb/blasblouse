@@ -12,6 +12,7 @@
 */
 Auth::routes();
 Route::get('/', 'PageController@home')->name('index');
+Route::get('/', 'PageController@popular');
 Route::get('/newarrival', 'PageController@newarrival');
 Route::get('/bestseller', 'PageController@bestseller');
 Route::get('/sale', 'PageController@sale');

@@ -1,4 +1,4 @@
-@extends('template/main2')
+@extends('template/userMain')
 
 
 

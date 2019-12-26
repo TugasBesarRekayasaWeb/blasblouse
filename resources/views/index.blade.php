@@ -52,32 +52,16 @@
 <!-- Popular This Week -->
 
 	<h1>POPULAR THIS WEEK</h1>
-	<div class="card" style="width: 18rem;">
-		<img src="{{ asset('assets/image/1.jpg') }}" class="card-img-top" alt="...">
-			<div class="card-body">
-			 	<h5 class="card-title">Cotton T-shirt</h5>
-			    <p class="card-text">IDR. 70.000</p>
-			    <a href="#" class="btn">SEE DETAILS</a>
+	@foreach ($popular as $pop)
+				<div class="card" style="width: 18rem;">
+				<img src="{{ asset('assets/image/'.$pop->gambarModel) }}" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h5 class="card-title">{{$pop->nama}}</h5>
+				<p class="card-text">IDR {{$pop->harga}}</p>
+				<a href="#" class="btn">SEE DETAILS</a>
 			</div>
-	</div>
-
-	<div class="card" style="width: 18rem;">
-		<img src="{{ asset('assets/image/2.jpg') }}" class="card-img-top" alt="...">
-			<div class="card-body">
-			 	<h5 class="card-title">Cotton T-shirt</h5>
-			    <p class="card-text">IDR. 70.000</p>
-			    <a href="#" class="btn">SEE DETAILS</a>
-			</div>
-	</div>
-
-	<div class="card" style="width: 18rem;">
-		<img src="{{ asset('assets/image/3.jpg') }}" class="card-img-top" alt="...">
-			<div class="card-body">
-			 	<h5 class="card-title">Cotton T-shirt</h5>
-			    <p class="card-text">IDR. 70.000</p>
-			    <a href="#" class="btn">SEE DETAILS</a>
-			</div>
-	</div>
+		</div>
+	@endforeach
 
 
 <!-- End of Popular This Week -->
