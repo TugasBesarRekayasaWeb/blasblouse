@@ -33,7 +33,7 @@ Route::get('/register','RegisterController@getRegister')->name('register');
 
 Route::get('/admin', 'BarangController@index')->name('admin');
 
-Route::delete('/barang/{barang}','BarangController@destroy');
+
 
 Route::patch('/barang/{barang}', 'BarangController@update');
 Route::get('/barang/{barang}/edit', 'BarangController@edit');
@@ -41,6 +41,7 @@ Route::get('/barang/{barang}/edit', 'BarangController@edit');
 Route::get('/barang/create', 'BarangController@create');
 Route::post('/barang/create', 'BarangController@store');
 
+Route::get('/barang/{barang}','BarangController@destroy');
 
 
 
