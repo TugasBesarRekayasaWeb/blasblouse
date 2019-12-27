@@ -42,9 +42,9 @@ Route::get('/barang/{barang}/edit', 'BarangController@edit');
 Route::get('/barang/create', 'BarangController@create');
 Route::post('/barang/create', 'BarangController@store');
 
+Route::get('/barang/{barang}/detail','BarangController@show');
+
 Route::get('/barang/{barang}','BarangController@destroy');
-
-
 
 
 

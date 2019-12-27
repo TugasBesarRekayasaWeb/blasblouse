@@ -20,7 +20,7 @@
       <td>{{ $prd->harga }}</td>
       <td><img src="{{ asset('assets/image/'.$prd->Gambar) }}" style="width: 50px;height: 50px;"></td>
       <td>
-        <a href=""  class="badge badge-success"> Detail </a>
+        <a href="/barang/{{$prd->id}}/detail"  class="badge badge-success"> Detail </a>
         <a href="/barang/{{$prd->id}}/edit" class="badge badge-primary"> Ubah </a>
         <a href="/barang/{{$prd->id}}" class="badge badge-danger"> Hapus </a>
       </td>

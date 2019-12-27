@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.9.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 25, 2019 at 09:31 AM
--- Server version: 10.1.40-MariaDB
--- PHP Version: 7.3.5
+-- Generation Time: Dec 27, 2019 at 04:51 AM
+-- Server version: 10.4.10-MariaDB
+-- PHP Version: 7.3.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -60,6 +60,37 @@ CREATE TABLE `migrations` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `popular`
+--
+
+CREATE TABLE `popular` (
+  `id` int(11) NOT NULL,
+  `nama` varchar(50) NOT NULL,
+  `harga` int(8) NOT NULL,
+  `detail` varchar(150) NOT NULL,
+  `S` int(5) NOT NULL,
+  `M` int(5) NOT NULL,
+  `L` int(5) NOT NULL,
+  `XL` int(5) NOT NULL,
+  `XXL` int(5) NOT NULL,
+  `gambar` varchar(30) NOT NULL,
+  `gambarModel` varchar(30) NOT NULL,
+  `gambarPosisi` varchar(30) NOT NULL,
+  `gambarDetail` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `popular`
+--
+
+INSERT INTO `popular` (`id`, `nama`, `harga`, `detail`, `S`, `M`, `L`, `XL`, `XXL`, `gambar`, `gambarModel`, `gambarPosisi`, `gambarDetail`) VALUES
+(1, 'Cotton T-shirt', 70000, 'Material comes from 100% cotton', 4, 4, 4, 4, 4, 'CottonTshirt.jpg', 'CottonTshirtModel.jpg', 'CottonTshirtPosisi.jpg', 'CottonTshirtDetail.jpg'),
+(2, 'Cotton T-shirt', 70000, 'Material comes from 100% cotton', 5, 5, 5, 5, 5, 'CottonTshirtt.jpg', 'CottonTshirttModel.jpg', 'CottonTshirttPosisi.jpg', 'CottonTshirttDetail.jpg'),
+(3, 'Cotton T-shirt', 70000, 'Material comes from 100% cotton', 6, 6, 6, 6, 6, 'CottonTshirttt.jpg', 'CottonTshirtttModel.jpg', 'CottonTshirtttPosisi.jpg', 'CottonTshirtttDetail.jpg');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `product`
 --
 
@@ -96,9 +127,7 @@ INSERT INTO `product` (`id`, `nama`, `harga`, `detail`, `S`, `M`, `L`, `XL`, `XX
 (8, 'V-neck T-shirt', 69000, 'Material comes from 100% cotton', 5, 5, 5, 5, 5, 'V-neckT-shirt.jpg', 'V-neckT-shirtModel.jpg', 'V-neckT-shirtPosisi.jpg', 'V-neckT-shirtDetail.jpg', '', ''),
 (9, 'Viscose Tshirt', 149000, 'Viscose Material ', 5, 5, 4, 4, 3, 'ViscoseT-shirt.jpg', 'ViscoseT-shirtModel.jpg', 'ViscoseT-shirtPosisi.jpg', 'ViscoseT-shirtDetail.jpg', '', ''),
 (14, 'asd', 4444, 'asdds', 5, 6, 7, 8, 8, '2.PNG', '2.PNG', '01.jpg', '2.PNG', '2019-12-24 12:21:24', '2019-12-24 12:21:24'),
-(15, 'asdsd', 5555, '1asdsa', 5, 5, 5, 5, 5, '2.PNG', '01.jpg', '01.jpg', '01.jpg', '2019-12-24 12:29:18', '2019-12-24 12:29:18'),
-(16, 'asdsd', 5555, '1asdsa', 5, 5, 5, 5, 5, '2.PNG', '01.jpg', '01.jpg', '01.jpg', '2019-12-24 12:30:59', '2019-12-24 12:30:59'),
-(17, 'asdsd', 5555, '1asdsa', 5, 5, 5, 5, 5, '2.PNG', '01.jpg', '01.jpg', '01.jpg', '2019-12-24 12:31:38', '2019-12-24 12:31:38');
+(15, 'asdsd', 5555, '1asdsa', 5, 5, 5, 5, 5, '2.PNG', '01.jpg', '01.jpg', '01.jpg', '2019-12-24 12:29:18', '2019-12-24 12:29:18');
 
 -- --------------------------------------------------------
 
@@ -143,6 +172,12 @@ ALTER TABLE `login`
 -- Indexes for table `migrations`
 --
 ALTER TABLE `migrations`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `popular`
+--
+ALTER TABLE `popular`
   ADD PRIMARY KEY (`id`);
 
 --
