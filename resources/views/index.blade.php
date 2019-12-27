@@ -58,7 +58,7 @@
 				<div class="card-body">
 					<h5 class="card-title">{{$pop->nama}}</h5>
 				<p class="card-text">IDR {{$pop->harga}}</p>
-				<a href="#" class="btn">SEE DETAILS</a>
+				<a href="/newarrivals/{{$pop->id}}/show" class="btn">SEE DETAILS</a>
 			</div>
 		</div>
 	@endforeach

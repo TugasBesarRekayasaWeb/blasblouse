@@ -14,7 +14,7 @@
 							<div class="card-body">
 							 	<h5 class="card-title">{{$prod->nama}}</h5>
 							    <p class="card-text">IDR {{$prod->harga}}</p>
-							    <a href="" class="btn">SHOPPING BAG</a>
+							    <a href="" class="btn">ADD TO SHOPPING BAG</a>
 							</div>
 					</div>
 				@endforeach
