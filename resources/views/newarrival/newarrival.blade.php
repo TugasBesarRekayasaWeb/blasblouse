@@ -6,13 +6,17 @@
 
 @section('badan')
 
-<div class="container">
-	<div class="row">
-		<div class="col-3">
 			<h1>New Arrival</h1>
-		</div>
-	</div>
-</div>
+			@foreach ($newarrival as $new)
+				<div class="card" style="width: 18rem;">
+					<img src="{{ asset('assets/image/'.$new->gambarModel) }}" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">{{$new->nama}}</h5>
+					<p class="card-text">IDR {{$new->harga}}</p>
+					<a href="#" class="btn">SEE DETAILS</a>
+					</div>
+				</div>
+			@endforeach
 
 
 @endsection
