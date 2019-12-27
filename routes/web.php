@@ -23,8 +23,8 @@ Route::get('/sale', 'PageController@sale');
 
 
 Route::get('/products', 'ProductsController@index');
-Route::get('/products/{product}', 'ProductsController@show');
-
+// Route::get('/products/{barang}/show', 'ProductsController@show');
+Route::get('/products/{barang}/detail','ProductsController@show');
 
 Route::get('/register','PageController@register');
 Route::get('/user','UserController@index');
@@ -47,9 +47,9 @@ Route::patch('/barang/{barang}', 'BarangController@update');
 Route::get('/barang/{barang}/edit', 'BarangController@edit');
 Route::get('/barang/create', 'BarangController@create');
 Route::post('/barang/create', 'BarangController@store');
+
+Route::get('/barang/{barang}/detail','BarangController@show');
 Route::get('/barang/{barang}','BarangController@destroy');
-
-
 
 
 

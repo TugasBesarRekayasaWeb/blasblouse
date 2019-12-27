@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Product;
 use App\Barang;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -49,10 +48,9 @@ class ProductsController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function show(Product $product)
+    public function show(Barang $barang)
     {
-        return $product;
-        // return view('products.show', compact('product'));
+        return view ('products.show', compact('barang'));
     }
 
     /**

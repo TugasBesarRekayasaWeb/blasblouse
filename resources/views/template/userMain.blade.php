@@ -36,6 +36,7 @@
 		  <div class="navbar-nav ml-4">
 		  	<a class="nav-item nav-link" href="#">shopping bag()</a>
 		  </div>
+		  
 	  </div>
 
 	</nav>

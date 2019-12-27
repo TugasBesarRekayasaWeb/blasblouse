@@ -22,6 +22,48 @@
 
 <body id="page-top">
 
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/admin">
+        <div class="sidebar-brand-icon rotate-n-15">
+          <img src="{{ asset('assets/image/navbarLogo2.png') }}" style="width: 50px;height: 50px;">
+        </div>
+        <div class="sidebar-brand-text mx-3">BlasBlouse</div>
+      </a>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0">
+
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item active">
+        <a class="nav-link" href="/admin">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Dashboard</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <li class="nav-item active">
+        <a class="nav-link" href="/barang/create">
+          <i class="fas fa-plus"></i>
+          <span>Create</span></a>
+      </li>
+
+    </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
         <!-- Topbar -->
         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
@@ -30,11 +72,7 @@
             <i class="fa fa-bars"></i>
           </button>
 
-           <div class="sidebar-brand-icon rotate-n-15">
-             <img src="{{ asset('assets/image/navbarLogo2.png') }}" style="width: 50px;height: 50px;">
-              </div>
-              <div class="sidebar-brand-text mx-3">Edit Barang</div>
-            <ul class="navbar-nav ml-auto">
+          <ul class="navbar-nav ml-auto">
 
             <!-- Nav Item - Search Dropdown (Visible Only XS) -->
             <li class="nav-item dropdown no-arrow d-sm-none">
@@ -62,7 +100,7 @@
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</span>
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Admin</span>
                 <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
               </a>
               <!-- Dropdown - User Information -->

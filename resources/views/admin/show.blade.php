@@ -1,72 +1,54 @@
-@extends('layout/template')
-
-@section('title', 'Show')
-
-@section('container')
-
+@extends('template/navTemplate')
+@section('title', 'Detail')
+ 
+@section('boddy')
 <div class="container">
   <div class="row">
-  <div class="col-10">
-<h1 class="mt-3" align="center">Detail Barang</h1>
-
-
-
-
-
-
-<table class="table table-sm" >
-  <thead>
-    <tr>
-      <th scope="col">Id</th>
-      <th scope="col">Nama</th>
-      <th scope="col">Picture</th>
-      <th scope="col">Merk</th>
-      <th scope="col">Harga</th>
-      <th scope="col">Ubah</th>
-      <th scope="col">Hapus</th>
-    </tr>
-  </thead>
-  <tbody>
-  @foreach($barang as $barang)
-    <tr>
-      <th >{{$loop->iteration}}</th>
-      <td>{{$barang->Nama_barang}}</td>
-      <td>
-      <img src="{{asset('Picture/'.$barang->Picture)}}"
-     alt="{{$barang->Picture}}" width="100%" height="180px"/>
-
-      </td>
-
-      <td>{{$barang->Merk_barang}}</td>
-      <td>{{$barang->Harga_barang}}</td>
-
-
-
-      <td>
-         <a href="{{$barang->id}}/edit" class="btn btn-outline-warning">Edit</a>
-      </td>
-
-    <td>
-        <form action="/barang/{{ $barang->id}}" method="post" class="d-inline">
-        @method('delete')
-        @csrf
-        <button type="submit" class="btn btn-outline-danger">Delete</button>
-        </form>
-    </td>
-
-
-
-    </tr>
-  @endforeach
-  </tbody>
-</table>
-
-
+    <div class="col">
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{{ asset('assets/image/'.$barang->Gambar) }}" class="d-block w-100 img-fluid" style="width: 100%; height: 500px;">
+          </div>
+          <div class="carousel-item">
+            <img src="{{ asset('assets/image/'.$barang->gambarDetail) }}" class="d-block w-100 img-fluid" >
+          </div>
+          <div class="carousel-item">
+            <img src="{{ asset('assets/image/'.$barang->gambarModel) }}" class="d-block w-100 img-fluid" >
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width: 100%;">
+        <div class="card-body">
+          <h5 class="card-title text-center">{{$barang->nama}}</h5>
+          <p class="card-text">Rp.{{$barang->harga}}.</p>
+          <p class="card-text">{{$barang->detail}}</p>
+          <p class="card-text">Stok S   : {{$barang->S}}</p>
+          <p class="card-text">Stok M   : {{$barang->M}}</p>
+          <p class="card-text">Stok L   : {{$barang->L}}</p>
+          <p class="card-text">Stok XL  : {{$barang->XL}}</p>
+          <p class="card-text">Stok XXL : {{$barang->XXL}}</p>
+          <div class="text-center">
+              <a href="/admin" class="btn btn-primary">Back</a> 
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-</div>
-</div>
+
+
+
+
 @endsection
-
-
-
-

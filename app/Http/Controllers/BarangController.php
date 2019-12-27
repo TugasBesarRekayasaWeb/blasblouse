@@ -135,4 +135,12 @@ class BarangController extends Controller
         Barang::destroy($barang->id);
         return redirect()->route('admin');
     }
+    public function show(Barang $barang)
+    {
+        return view ('admin.show', compact('barang'));
+    }
+    public function detail(Barang $barang)
+    {
+        return view ('products.show', compact('barang'));
+    }
 }
