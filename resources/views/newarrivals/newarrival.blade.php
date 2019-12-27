@@ -13,7 +13,7 @@
 					<div class="card-body">
 						<h5 class="card-title">{{$new->nama}}</h5>
 					<p class="card-text">IDR {{$new->harga}}</p>
-					<a href="/newarrivals/1" class="btn">SEE DETAILS</a>
+					<a href="/newarrivals/{{$new->id}}/show" class="btn">SEE DETAILS</a>
 					</div>
 				</div>
 			@endforeach

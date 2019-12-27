@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Newarrival;
-use App\Product;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -20,9 +19,9 @@ class NewarrivalsController extends Controller
     public function index()
     {
         $today = today();
-        $newarrival = DB::table('product')->where('created_at', '', today())->get();
+        $newarrival = DB::table('products')->where('created_at', '', today())->get();
         //dd($newarrival);
-        return view('/newarrivals/newarrival', ['newarrival' => $newarrival]);
+        return view('newarrivals/newarrival', ['newarrival' => $newarrival]);
     }
 
     /**

@@ -16,15 +16,14 @@ Route::get('/', 'PageController@popular');
 
 
 Route::get('/newarrivals', 'NewarrivalsController@index');
-Route::get('/newarrivals/{product}', 'NewarrivalsController@show');
+Route::get('/newarrivals/{newarrival}/show', 'NewarrivalsController@show');
 
 
 Route::get('/sale', 'PageController@sale');
 
 
 Route::get('/products', 'ProductsController@index');
-// Route::get('/products/{barang}/show', 'ProductsController@show');
-Route::get('/products/{barang}/detail','ProductsController@show');
+Route::get('/products/{product}/show','ProductsController@show');
 
 Route::get('/register','PageController@register');
 Route::get('/user','UserController@index');
