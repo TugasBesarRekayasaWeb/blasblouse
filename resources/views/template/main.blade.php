@@ -22,7 +22,7 @@
 		  </button>
 		  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 		    <div class="navbar-nav">
-		      <a class="nav-item nav-link" href="{{url('/newarrival')}}">NEW ARRIVAL</a>
+		      <a class="nav-item nav-link" href="{{url('/newarrivals')}}">NEW ARRIVAL</a>
 		      <a class="nav-item nav-link" href="{{url('/sale')}}">SALE</a>
 		    </div>
 		  </div>

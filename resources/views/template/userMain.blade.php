@@ -24,7 +24,7 @@
 		    <div class="navbar-nav">
 		      <a class="nav-item nav-link" href="{{url('/newarrival')}}">NEW ARRIVAL</a>
 		      <a class="nav-item nav-link" href="{{url('/sale')}}">SALE</a>
-		      <a class="nav-item nav-link" href="{{url('/product')}}">PRODUCT</a>
+		      <a class="nav-item nav-link" href="{{url('/products')}}">PRODUCT</a>
 		    </div>
 		  </div>
 		  <!-- Search -->

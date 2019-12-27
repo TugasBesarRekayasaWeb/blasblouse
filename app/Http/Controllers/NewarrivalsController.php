@@ -2,10 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Newarrival;
+use App\Product;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
 
-class ProductController extends Controller
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Carbon;
+
+class NewarrivalsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,11 +19,11 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $product = DB::table('product')->get();
-        //dump($product);
-        return view('product.product', ['product' => $product]) ;
+        $today = today();
+        $newarrival = DB::table('product')->where('created_at', '', today())->get();
+        //dd($newarrival);
+        return view('/newarrivals/newarrival', ['newarrival' => $newarrival]);
     }
-
 
     /**
      * Show the form for creating a new resource.
@@ -44,21 +49,21 @@ class ProductController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Newarrival  $newarrival
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Newarrival $newarrival)
     {
-        //
+        return view('newarrivals.show', compact('newarrival'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Newarrival  $newarrival
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Newarrival $newarrival)
     {
         //
     }
@@ -67,10 +72,10 @@ class ProductController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Newarrival  $newarrival
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Newarrival $newarrival)
     {
         //
     }
@@ -78,12 +83,11 @@ class ProductController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Newarrival  $newarrival
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Newarrival $newarrival)
     {
         //
     }
-
 }

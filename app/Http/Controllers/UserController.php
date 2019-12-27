@@ -8,8 +8,8 @@ use Illuminate\Support\Facades\DB;
 class UserController extends Controller
 {
     public function index(){
-    	$product = DB::table('product')->get();
+    	$product = DB::table('products')->get();
         //dump($product);
-        return view('product.product', ['product' => $product]) ;
+        return view('products.product', ['product' => $product]) ;
     }
 }

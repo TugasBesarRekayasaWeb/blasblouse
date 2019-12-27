@@ -13,10 +13,17 @@
 Auth::routes();
 Route::get('/', 'PageController@home')->name('index');
 Route::get('/', 'PageController@popular');
-Route::get('/newarrival', 'PageController@newarrival');
-Route::get('/bestseller', 'PageController@bestseller');
+
+
+Route::get('/newarrivals', 'NewarrivalsController@index');
+Route::get('/newarrivals/{product}', 'NewarrivalsController@show');
+
+
 Route::get('/sale', 'PageController@sale');
-Route::get('/product', 'ProductController@index');
+
+
+Route::get('/products', 'ProductsController@index');
+Route::get('/products/{product}', 'ProductsController@show');
 
 
 Route::get('/register','PageController@register');
@@ -38,10 +45,8 @@ Route::get('/admin', 'BarangController@index')->name('admin');
 
 Route::patch('/barang/{barang}', 'BarangController@update');
 Route::get('/barang/{barang}/edit', 'BarangController@edit');
-
 Route::get('/barang/create', 'BarangController@create');
 Route::post('/barang/create', 'BarangController@store');
-
 Route::get('/barang/{barang}','BarangController@destroy');
 
 

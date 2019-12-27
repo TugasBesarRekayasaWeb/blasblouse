@@ -6,7 +6,6 @@ use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Carbon;
 
 class PageController extends Controller
 {
@@ -28,19 +27,9 @@ class PageController extends Controller
         return view('index');
     }
 
-    public function newarrival() {
-        $today = today();
-        $newarrival = DB::table('product')->where('created_at', '',today())->get();
-        //dd($newarrival);
-        return view('/newarrival/newarrival', ['newarrival' => $newarrival]);
-    }
-
     public function sale(){
         return view('/sale/sale');
     }
-
-
-
 
 
 
