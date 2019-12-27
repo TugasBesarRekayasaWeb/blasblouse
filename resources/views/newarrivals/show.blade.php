@@ -1,25 +1,33 @@
-@extends('template/main')
-
-
-
-@section('title', 'New Arrival')
-
-@section('badan')
-
+<!DOCTYPE html>
+<html>
+<head>
+     <title>Detail Product</title>
+     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/index.css') }}">
+</head>
+<body>
      <div class="kotak">
-          <h5 class="card-title text-center">{{$newarrival->nama}}</h5>
-          <p class="card-text">Rp.{{$newarrival->harga}}.</p>
-          <p class="card-text">{{$newarrival->detail}}</p>
-          <p class="card-text">Stok S   : {{$newarrival->S}}</p>
-          <p class="card-text">Stok M   : {{$newarrival->M}}</p>
-          <p class="card-text">Stok L   : {{$newarrival->L}}</p>
-          <p class="card-text">Stok XL  : {{$newarrival->XL}}</p>
-          <p class="card-text">Stok XXL : {{$newarrival->XXL}}</p>
-          <div class="text-center">
-              <a href="/user" class="btn btn-primary">Back</a>
+          <!-- <a href="/user" class="back">Back</a> -->
+          <button class="back"><a href="/newarrivals">Back</button></a>
+          <img src="{{ asset('assets/image/'.$newarrival->Gambar) }}" class="img1">
+          <img src="{{ asset('assets/image/'.$newarrival->gambarModel) }}" class="img2">
+          <div class="clear"></div>
+          <img src="{{ asset('assets/image/'.$newarrival->gambarPosisi) }}" class="img3">
+          <img src="{{ asset('assets/image/'.$newarrival->gambarDetail) }}" class="img4">
      </div>
+     <div class="keterangan">
+          <h2>{{$newarrival->nama}}</h2>
+          <h3>Rp.{{$newarrival->harga}}.</h3>
+          <p>{{$newarrival->detail}}</p>
+          <button class="ukuran"><a href="#">S</button></a>
+          <button class="ukuran"><a href="#">M</button></a>
+          <button class="ukuran"><a href="#">L</button></a>
+          <button class="ukuran"><a href="#">XL</button></a>
+          <button class="ukuran"><a href="#">XXL</button></a>
+          <div class="clear"></div>  
+          <button class="toLogin"><a href="/login">ADD TO SHOPPING BAG</button></a>
+     </div>
+              
+     
 
-
-@endsection
-
-@section('footer')
+</body>
+</html>

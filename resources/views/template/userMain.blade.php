@@ -35,6 +35,7 @@
 		  <!-- End of Search -->
 		  <div class="navbar-nav ml-4">
 		  	<a class="nav-item nav-link" href="#">shopping bag()</a>
+		  	<a class="nav-item nav-link" href="/">Logout</a>
 		  </div>
 		  
 	  </div>
